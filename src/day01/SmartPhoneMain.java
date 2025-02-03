@@ -11,6 +11,6 @@ public class SmartPhoneMain {
         //폰으로부터 상속받은 메소드 호출
         myPhone.bell();
         //스마트폰으로부터 상속받은 메소드 호출
-        myPhone.setWifi(true);
+        //myPhone.setWifi(true);
     }
 }
