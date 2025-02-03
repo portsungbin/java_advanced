@@ -1,0 +1,8 @@
+클래스 상속
+프로그램에서는 자식이 부모를 선택한다. extends
+
+public class 자식클래스 extends 부모클래스{}
+
+자바는 다중상속을 허용하지 않는다
+public class 자식클래스 extends 부모1, 부모2, 부모3 {} -> X
+pulbic class 자식클래스 extends 부모 implements 인터페이스1, 인터2, 인터3 (기능은 인터페이스를 이용하여 다중상속 구현) ...{} -> O
