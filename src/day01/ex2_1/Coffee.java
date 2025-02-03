@@ -1,9 +1,9 @@
-package day01.ex2;
+package day01.ex2_1;
 
-public class Tea extends Beverage {
+public class Coffee extends Beverage{
     static int amount = 0;
 
-    public Tea(String name) {
+    public Coffee(String name) {
         super(name);
         calcPrice();
         amount++;
@@ -12,14 +12,14 @@ public class Tea extends Beverage {
     @Override
     public void calcPrice() {
         switch (name) {
-            case "lemonTea" :
+            case "Amricano" :
                 setPrice(1500);
                 break;
-            case "ginsengTea" :
-                setPrice(2000);
-                break;
-            case "redginsengTea" :
+            case "CafeLatte" :
                 setPrice(2500);
+                break;
+            case "Cappuccino" :
+                setPrice(3000);
                 break;
         }
     }

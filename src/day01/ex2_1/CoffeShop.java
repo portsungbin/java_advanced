@@ -1,4 +1,4 @@
-package day01.ex2;
+package day01.ex2_1;
 
 public class CoffeShop {
 	public static void main(String[] args) {
