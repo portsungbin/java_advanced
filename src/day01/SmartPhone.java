@@ -8,7 +8,7 @@ public class SmartPhone extends Phone {
     //생성자 선언
     public SmartPhone(String model, String color) {
         this.model = model;
-        this.color = color;
+        this.color = color; //Phone 으로부터 받은 필드
     }
 
     public void setWifi(boolean wifi) {
