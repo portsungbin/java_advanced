@@ -18,4 +18,5 @@ public class Truck extends Wheeler {
     public void speedDown(int speed) {
 
     }
+    
 }
