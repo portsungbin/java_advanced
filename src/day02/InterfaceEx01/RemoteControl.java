@@ -14,4 +14,21 @@ public interface RemoteControl {
     //볼륨설정
     public abstract void setVolume(int volume);
 
+    default void setMute(boolean mute) {
+        if (mute) {
+            System.out.println("쉿 모드로 전환됩니다.");
+            setVolume(min);
+        }else {
+            System.out.println("쉿 모드가 해제되었습니다.");
+        }
+    }
+
+    //배터리 교체 가능을 정적메소드를 통하여 구현 changeBattery() 객체없이 호출가능(클래스를 호출하는 변수명)
+
+    public static void changeBattery(){
+        System.out.println("건전지를 교체합니다.");
+    }
+
+
+
 }
