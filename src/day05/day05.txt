@@ -1,0 +1,48 @@
+Object클래스
+-boolean equals(object obj)
+    객체 동등 비교 equals() 사용
+    객체의 주소값을 비교하고 boolean(true, false) 값을 리턴
+
+-int hashcode()
+    객체 해시코드란 객체를 식별하는 정수를 의미함.
+    Object 클래스의 hashcode() 객체의 메모리 번지를 이용해서 해시코드를 생성한다.
+    객체마다 다른 정수값을 리턴한다.
+
+    hashcode()의 목적은 객체의 주소값을 기반으로 해싱해서 고유한 숫자값을 반환한다.
+    객체가 같은지 같지 않은지를 판별한다.
+    만일, 객체 자체의 주소값(해시값) 얻어야 하는 상황이라면 : java.util.Object
+                                                            identityHashCode() 메소드 제공 //원래 객체의 주소값
+
+***자바는 두 객체가 동등함을 비교할때, hashcode() + equals()메소드를 같이 사용하여 검증(식별)한다.
+    hashcode() + equals()
+
+-String toString()
+
+-clone 메소드 : 객체를 깊은 복사(deep copy) 할때 사용하는 메소드
+Object.clone()메소드는 인스턴스 객체의 복제를 위한 메소드
+해당 인스턴스를 복제해서 새로운 인스턴스를 생성해 그 참조값을 반환한다.
+
+
+
+2. System 클래스
+자바의 byte코드의 실행 주체는 JVM이 위에서 싱행되므로, 운영체제의 모든 기능을 자바코드로 직접 접근하기 어렵다.
+java.lang.System 이용하면 운영체제의 일부기능을 이용할 수 있다.
+
+System.exit(0); //프로세스를 강제로 종료
+
+//진행 시간 읽기
+System클래스   1970년 1월 1일 0시 부터 시작해서 현재까지 진행된 시간
+             currentTimeMills() <- 1/1000초 단위로 진행된 시간 반환
+             nanoTime() 1/1000000000 초 단위로 진행된 시간 반환
+
+날짜와 시간 클래스
+자바는 컴퓨터의 날짜와 시간을 읽을 수 있도록 java.util 패키지에서 Date클래스(날짜 정보를 전달), Calender(다양한 시간대별로 날짜와 시간) 클래스 제공
+조작을 위해서는 java.time 패키지에서 LocalDateTime 클래스를 주로 사용함
+
+
+
+
+
+
+
+
