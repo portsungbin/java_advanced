@@ -1,4 +1,4 @@
-package day05.formatEx;
+package day05.api.formatEx;
 
 /*
 * format(형식) 클래스는 숫자 또는 날짜를 원하는 형태로 문자열로 변환해 주는 기능

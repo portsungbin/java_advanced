@@ -1,4 +1,4 @@
-package day05.reflectionEx;
+package day05.api.reflectionEx;
 
 import java.util.Arrays;
 

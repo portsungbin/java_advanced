@@ -1,4 +1,4 @@
-package day05.SystemEx;
+package day05.api.SystemEx;
 
 public class ExitEx {
     public static void main(String[] args) {

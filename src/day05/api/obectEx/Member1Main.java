@@ -1,4 +1,4 @@
-package day05.obectEx.api;
+package day05.api.obectEx;
 
 public class Member1Main {
     public static void main(String[] args) {

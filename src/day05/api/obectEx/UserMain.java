@@ -1,4 +1,4 @@
-package day05.obectEx.api;
+package day05.api.obectEx;
 
 import java.util.Arrays;
 

@@ -1,4 +1,4 @@
-package day05.obectEx.api.lombokEx;
+package day05.api.obectEx.lombokEx;
 
 public class Main {
     public static void main(String[] args) {
