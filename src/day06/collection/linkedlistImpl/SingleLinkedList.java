@@ -24,4 +24,15 @@ public class SingleLinkedList<T> {
         }
     }
 
+    public void printAll() {
+        if (head != null) {
+            Node<T> node = this.head;
+            System.out.println(node.data);
+            while (node.next != null) {
+                node = node.next;
+                System.out.println(node.data);
+            }
+        }
+    }
+
 }

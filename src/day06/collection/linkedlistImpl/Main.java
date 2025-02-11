@@ -11,5 +11,7 @@ public class Main {
         System.out.println(myLinkedList.head.next.next.data);
         myLinkedList.addNode(4);
         System.out.println(myLinkedList.head.next.next.next.data);
+        System.out.println("----------------------------------------");
+        myLinkedList.printAll();
     }
 }
