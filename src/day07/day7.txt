@@ -7,3 +7,20 @@ Map인터페이스는 Stream을 사용하거나 간접적으로 키를 Collectio
 
 결론 : List, Set, Queue 에 상속을 하는 실제적인 최상위 컬렉션 타입
         upcastion으로 다양한 종류의 컬렉션 자료형을 받아 데이터를 삽입, 삭제, 탐색 기능을 처리할 수 있다.
+
+2. Comparble Interface / Comparator
+    Comparable Interface 를 구현한 클래스는 conpareTo() 메소드를 오버라이딩해서 구현 클래스 객체들간의 정렬 기준을 정의하여 정렬하라.
+    (natural ording) 정의한 클래스는 정렬함수를 통해서 정렬할 수 있다.
+    리스트 Collection.sort()
+    배열  Arrays.sort()
+
+    상품(스마스폰) 클래스는 상품이름과 가격 필드를 가지고 있다.
+
+3. Comparator Interface 객체를 정렬하는데 사용되는 인터페이스
+    익명 객체를 이용하여 다양한 속성을 받아 정렬 할 수 있다는 장점이 있다.
+
+4. Set : 순서가 없이 저장하고 동등객체일 경우 저장하지 않음
+
+5. Map컬렉션 : 키(key) , 값(Value) 으로 구성된 엔트리(Entry) 객체를 저장한다.
+    키와 값은 모두 객체이다.
+    키의 특징은 중복 저장할 수 없다.

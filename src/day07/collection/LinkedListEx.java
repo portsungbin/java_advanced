@@ -1,4 +1,4 @@
-package day07.collection.listEx;
+package day07.collection;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

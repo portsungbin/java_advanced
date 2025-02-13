@@ -1,4 +1,4 @@
-package day07.collection.linkedlistImpl;
+package day07.collection.listEx.linkedlistImpl;
 
 public class SingleLinkedList<T> {
     public Node<T> head = null;

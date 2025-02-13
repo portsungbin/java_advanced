@@ -1,4 +1,4 @@
-package day07.collection.linkedlistImpl;
+package day07.collection.listEx.linkedlistImpl;
 
 public class Main {
     public static void main(String[] args) {

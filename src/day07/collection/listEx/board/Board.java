@@ -1,4 +1,4 @@
-package day07.collection.listEx;
+package day07.collection.listEx.board;
 
 import lombok.Getter;
 import lombok.Setter;
