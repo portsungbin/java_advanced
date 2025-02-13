@@ -1,4 +1,4 @@
-package day07.collection.listEx.sorting.Quiz;
+package workshop.studentWorkshop;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -10,17 +10,14 @@ import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
+
 /**
- * 
- * @information 객체로 저장된 Student를 읽어와 평균으로 성적을 오름차순으로 orderByAvg.dat파일에 쓰는 클래스
- * @condition 조건) 정렬시 TreeSet과 compator 인터페이스를 이용하여 구현하세요.
- * 
- * @author SYM
+ * The type Desc comparator.
  *
+ * @author SYM
+ * @information 객체로 저장된 Student를 읽어와 평균으로 성적을 오름차순으로 orderByAvg.dat파일에 쓰는 클래스
+ * @condition 조건 ) 정렬시 TreeSet과 compator 인터페이스를 이용하여 구현하세요.
  */
-
-
-
 //평균성적의 내림차순으로 정렬하기 위한 Compatator 구현 클래스
 class DescComparator implements Comparator<Student> {
 
@@ -32,7 +29,9 @@ class DescComparator implements Comparator<Student> {
 }
 
 
-
+/**
+ * The type Sorted student.
+ */
 public class SortedStudent {
 
 	// 멤버 필드
@@ -40,13 +39,21 @@ public class SortedStudent {
 	private String RESULT_DATA_FILE = "orderByAvg.dat";
 	private Set<Student> recordSet;
 
-	// 생성자
+	/**
+	 * Instantiates a new Sorted student.
+	 */
+// 생성자
 	public SortedStudent() {
 		recordSet = new TreeSet<Student>(new DescComparator());
 	}
 
 
-	// 데이터 저장소로부터 평균점수의 내림차순으로 정렬되도록 지정된 recordSet 에 레코드를 읽어온다.
+	/**
+	 * Load origin records boolean.
+	 *
+	 * @return the boolean
+	 */
+// 데이터 저장소로부터 평균점수의 내림차순으로 정렬되도록 지정된 recordSet 에 레코드를 읽어온다.
 	public boolean loadOriginRecords() {
 
 		ObjectInputStream in = null;
@@ -75,7 +82,12 @@ public class SortedStudent {
 
 	}
 
-	// orderByAvg.dat 파일에 recordSet 의 데이터를 기록한다.
+	/**
+	 * Save ordered records boolean.
+	 *
+	 * @return the boolean
+	 */
+// orderByAvg.dat 파일에 recordSet 의 데이터를 기록한다.
 	public boolean saveOrderedRecords() {
 
 		ObjectOutputStream out = null;
@@ -102,7 +114,10 @@ public class SortedStudent {
 	}
 
 
-	// recordSet 의 내용을 출력한다.
+	/**
+	 * Print.
+	 */
+// recordSet 의 내용을 출력한다.
 	public void print() {
 
 		System.out.println("************************************************************************************************************************\n");
@@ -131,11 +146,14 @@ public class SortedStudent {
 		System.out.println("                                                          ##  프로그램 종료 ##                                                            ");
 		System.out.println("************************************************************************************************************************");
 	}
-	
-	
-	
-	
-	// 실행을 위한 메인 메소드
+
+
+	/**
+	 * The entry point of application.
+	 *
+	 * @param args the input arguments
+	 */
+// 실행을 위한 메인 메소드
 	public static void main(String[] args) {
 		
 		SortedStudent sorted = new SortedStudent();

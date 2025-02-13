@@ -1,4 +1,4 @@
-package day07.collection.listEx.sorting.Quiz;
+package workshop.studentWorkshop;
 
 import java.io.BufferedReader;
 import java.io.File;
@@ -13,12 +13,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 
- * @information 콘솔로부터 학생의 정보를 입력받아 student.dat 파일에 저장하는 클래스 
- * @author SYM
+ * The type Student input.
  *
+ * @author SYM
+ * @information 콘솔로부터 학생의 정보를 입력받아 student.dat 파일에 저장하는 클래스
  */
-
 public class StudentInput {
 	
 	// 멤버 필드
@@ -26,16 +25,23 @@ public class StudentInput {
 	private BufferedReader reader;
 	private List<Student> recordSet;
 
-	
-	// 생성자
+
+	/**
+	 * Instantiates a new Student input.
+	 */
+// 생성자
 	public StudentInput() {
 		this.recordSet = new ArrayList<Student>();
 		this.reader = new BufferedReader(new InputStreamReader(System.in));
 	}
-	
-	
-	
-	// 데이터 저장소로부터 모든 레코드를 읽어온다
+
+
+	/**
+	 * Ready boolean.
+	 *
+	 * @return the boolean
+	 */
+// 데이터 저장소로부터 모든 레코드를 읽어온다
 	public boolean ready()  {  // loadDBRecoreds()
 		ObjectInputStream in = null;	
 		File dataFile = null;
@@ -64,8 +70,13 @@ public class StudentInput {
 		}
 		return true;	
 	}
-	
-	// 데이터 저장소에 입력받은 레코드를 저장
+
+	/**
+	 * Release boolean.
+	 *
+	 * @return the boolean
+	 */
+// 데이터 저장소에 입력받은 레코드를 저장
 	public boolean release() {  // saveDBRecords()
 		ObjectOutputStream out = null;
 		
@@ -90,10 +101,14 @@ public class StudentInput {
 		}
 		return true;
 	}
-	
-	
-	
-	// 콘솔로부터 문자열을 입력받아서 반환해준다. (예외처리를 노출시키지 않음.)
+
+
+	/**
+	 * Gets record string.
+	 *
+	 * @return the record string
+	 */
+// 콘솔로부터 문자열을 입력받아서 반환해준다. (예외처리를 노출시키지 않음.)
 	public String getRecordString() {	
 		String recordString = null;
 		
@@ -104,8 +119,14 @@ public class StudentInput {
 		} 	
 		return recordString;	
 	}
-	
-	// 콘솔로부터 문자열을 입력받아서 Student 타입의 객체를 반환해주는 메소드
+
+	/**
+	 * String to student student.
+	 *
+	 * @param source the source
+	 * @return the student
+	 */
+// 콘솔로부터 문자열을 입력받아서 Student 타입의 객체를 반환해주는 메소드
 	public Student stringToStudent(String source) {
 
 		if (source == null || source.equals(""))
@@ -123,15 +144,25 @@ public class StudentInput {
 		return new Student(name, scores);
 
 	}
-	
-	// 새로운 레코드를 recordSet 에 담는다.
+
+	/**
+	 * Put record.
+	 *
+	 * @param record the record
+	 */
+// 새로운 레코드를 recordSet 에 담는다.
 	public void putRecord(Student record) {
 		this.recordSet.add(record);
 	}
-	
-	
 
-	// 입력된 학생 레코드의 점수가 유효한 지 확인
+
+	/**
+	 * Score validate ok boolean.
+	 *
+	 * @param student the student
+	 * @return the boolean
+	 */
+// 입력된 학생 레코드의 점수가 유효한 지 확인
 	public boolean scoreValidateOk (Student student) {
 		for (int score : student.getRecord()) {
 			if (score < 0 || score > 100) {
@@ -141,8 +172,14 @@ public class StudentInput {
 		}
 		return true;
 	}
-	
-	// 중복된 이름인지 확인
+
+	/**
+	 * Name validate ok boolean.
+	 *
+	 * @param name the name
+	 * @return the boolean
+	 */
+// 중복된 이름인지 확인
 	public boolean nameValidateOk (String name) {
 		for (Student other : recordSet) {
 			if (other.getName().equals(name)) {
@@ -152,8 +189,14 @@ public class StudentInput {
 		}
 		return true;
 	}
-	
-	// 입력 형식이 올바른지 확인
+
+	/**
+	 * Format validate ok boolean.
+	 *
+	 * @param source the source
+	 * @return the boolean
+	 */
+// 입력 형식이 올바른지 확인
 	public boolean formatValidateOk (String source) {		
 		boolean isOk = false;	
 		if (source != null && !"".equals(source)) {	
@@ -172,11 +215,14 @@ public class StudentInput {
 		if (!isOk) System.out.println(" ※ 입력 형식이 올바르지 않습니다.");
 		return isOk;
 	}
-	
 
 
-
-	// 실행을 위한 main 메소드
+	/**
+	 * The entry point of application.
+	 *
+	 * @param args the input arguments
+	 */
+// 실행을 위한 main 메소드
 	public static void main(String[] args) {
 		
 		Student record;

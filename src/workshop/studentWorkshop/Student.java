@@ -1,7 +1,10 @@
-package day07.collection.listEx.sorting.Quiz;
+package workshop.studentWorkshop;
 
 import java.io.Serializable;
 
+/**
+ * The type Student.
+ */
 public class Student implements Serializable {
 
 	private static final long serialVersionUID = -1553498408278534089L;
@@ -9,8 +12,14 @@ public class Student implements Serializable {
 	// 멤버 필드
 	private String name;
 	private int [] record;
-	
-	// 생성자
+
+	/**
+	 * Instantiates a new Student.
+	 *
+	 * @param name   the name
+	 * @param record the record
+	 */
+// 생성자
 	public Student (String name, int[] record) {
 		this.name = name;
 		this.record = record;

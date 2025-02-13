@@ -1,4 +1,4 @@
-package day07.collection.listEx.sorting.Quiz;
+package workshop.studentWorkshop;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -8,14 +8,13 @@ import java.util.Comparator;
 import java.util.Set;
 import java.util.TreeSet;
 
+
 /**
- * 
- * @information 저장된 Student 객체를 읽어와 성적순(평균기준)으로 오름차순으로 학생정보를 화면으로 출력하는 클래스 
- * @author SYM
+ * The type Asc comparator.
  *
+ * @author SYM
+ * @information 저장된 Student 객체를 읽어와 성적순(평균기준)으로 오름차순으로 학생정보를 화면으로 출력하는 클래스
  */
-
-
 //평균성적의 오름차순으로 정렬하기 위한 Compatator 구현 클래스
 class AscComparator implements Comparator<Student> {
 
@@ -26,18 +25,29 @@ class AscComparator implements Comparator<Student> {
 	
 }
 
+/**
+ * The type Student output.
+ */
 public class StudentOutput {
 
 	// 멤버 필드
 	private String INPUT_DATA_FILE = "student.dat";
 	private Set<Student> recordSet;
-	
-	// 생성자
+
+	/**
+	 * Instantiates a new Student output.
+	 */
+// 생성자
 	public StudentOutput() {
 		recordSet = new TreeSet<Student>(new AscComparator());
 	}
-	
-	// 데이터 저장소로부터 정렬방법이 지정된 recordSet 으로 데이터를 얻어온다.
+
+	/**
+	 * Load db records boolean.
+	 *
+	 * @return the boolean
+	 */
+// 데이터 저장소로부터 정렬방법이 지정된 recordSet 으로 데이터를 얻어온다.
 	public boolean loadDBRecords() {
 		
 		ObjectInputStream in = null;
@@ -64,8 +74,11 @@ public class StudentOutput {
 		return true;
 		
 	}
-	
-	// recordSet 의 내용을 출력한다.
+
+	/**
+	 * Print.
+	 */
+// recordSet 의 내용을 출력한다.
 	public void print() {
 
 		System.out.println("**********************************************************************************************************\n");
@@ -93,9 +106,14 @@ public class StudentOutput {
 		System.out.println("                                                   ##  프로그램 종료 ##                                                   ");
 		System.out.println("**********************************************************************************************************");
 	}
-	
-	
-	// 실행을 위한 main 메소드
+
+
+	/**
+	 * The entry point of application.
+	 *
+	 * @param args the input arguments
+	 */
+// 실행을 위한 main 메소드
 	public static void main(String[] args) {
 		
 		StudentOutput output = new StudentOutput();
