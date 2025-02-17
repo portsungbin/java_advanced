@@ -1,4 +1,4 @@
-package BoardQuiz;
+package BoardPkg;
 
 import lombok.Data;
 
