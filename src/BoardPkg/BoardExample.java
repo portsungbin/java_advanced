@@ -4,6 +4,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Scanner;
 
+//컬렉션 사용해서 다시 만들기!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 public class BoardExample {
     // 출력용 날짜 포맷 (목록 출력에 사용)
     static SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy.MM.dd");
@@ -218,8 +219,8 @@ public class BoardExample {
     }
 
     // [프로그램 종료]
-    public boolean Exit() {
+    public void Exit() {
         System.out.println("*** Exit() 메소드 실행됨");
-        return true;
+        System.exit(0);
     }
 }
