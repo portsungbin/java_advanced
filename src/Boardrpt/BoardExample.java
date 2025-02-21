@@ -142,7 +142,7 @@ public class BoardExample {
         }
 
         // Board 클래스의 toString()으로 상세 출력 (날짜는 toString()에서 포맷됨)
-        System.out.println(boards.get(bno -1));
+        System.out.println(boards.get(bno-1));
         System.out.println("1.Update | 2.Delete | 3.List");
         int choice = scan.nextInt();
         scan.nextLine();
