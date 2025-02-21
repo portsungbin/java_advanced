@@ -16,6 +16,7 @@ public class Board {
     public Board() {
     }
 
+
     @Override
     public String toString() {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy.MM.dd");

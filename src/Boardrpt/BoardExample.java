@@ -234,6 +234,7 @@ public class BoardExample {
         }
     }
 
+
     // 프로그램 종료
     public void Exit() {
         System.out.println("*** Exit() 메소드 실행됨");
