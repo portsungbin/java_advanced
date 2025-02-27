@@ -1,8 +1,9 @@
 <component name="libraryTable">
   <library name="lombok">
     <CLASSES>
-      <root url="jar://$PROJECT_DIR$/../../../../bootcampstudy/lombok.jar!/" />
-      <root url="jar://$PROJECT_DIR$/../lombok.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/json-simple-1.1.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/lombok.jar!/" />
+      <root url="jar://$PROJECT_DIR$/../library/mysql-connector-java-8.0.17.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
