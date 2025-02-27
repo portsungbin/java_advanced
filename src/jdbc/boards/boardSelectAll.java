@@ -1,11 +1,8 @@
-package jdbc.users;
+package jdbc.boards;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import java.sql.*;
 
-public class UserSelectAll {
+public class boardSelectAll {
     public static void main(String[] args) {
         Connection connection = null;
 
@@ -25,18 +22,26 @@ public class UserSelectAll {
 
 
             String query = new StringBuilder()
-                    .append(" SELECT * FROM users ")
+                    .append(" SELECT * FROM boards ")
                     .toString();
 
             PreparedStatement pstmt = connection.prepareStatement(query);
-            pstmt.setString(1,"12345");
-            pstmt.setString(2,"1");
 
-            // 4. SQL 실행
-            int rows = pstmt.executeUpdate();
-            System.out.println(rows + "rows update completed");
-            // 5. PreparedStatement 객체 닫기
-            pstmt.close();
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+               Board board = new Board();
+               board.setBno(rs.getInt("bno"));
+               board.setBtitle(rs.getString("btitle"));
+               board.setBwriter(rs.getString("bwriter"));
+               board.setBcontent(rs.getString("bcontent"));
+               board.setBdate(rs.getDate("bdate"));
+               board.setBfiledata(rs.getBlob("bfiledata"));
+               board.setBfilename(rs.getString("bfilename"));
+               System.out.println(board);
+
+            }
+
+
 
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);

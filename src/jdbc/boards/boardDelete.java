@@ -1,11 +1,11 @@
-package jdbc.users;
+package jdbc.boards;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class UserSelectAll {
+public class boardDelete {
     public static void main(String[] args) {
         Connection connection = null;
 
@@ -24,13 +24,13 @@ public class UserSelectAll {
             System.out.println("Connection ok " + connection);
 
 
+
             String query = new StringBuilder()
-                    .append(" SELECT * FROM users ")
+                    .append(" DELETE FROM boards where bno = ? ")
                     .toString();
 
             PreparedStatement pstmt = connection.prepareStatement(query);
-            pstmt.setString(1,"12345");
-            pstmt.setString(2,"1");
+            pstmt.setString(1,"1");
 
             // 4. SQL 실행
             int rows = pstmt.executeUpdate();

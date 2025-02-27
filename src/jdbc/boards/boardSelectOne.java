@@ -1,13 +1,13 @@
-package jdbc.users;
+package jdbc.boards;
 
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.SQLException;
+import jdbc.boards.Board;
 
-public class UserSelectAll {
+import java.sql.*;
+
+public class boardSelectOne {
     public static void main(String[] args) {
         Connection connection = null;
+        ResultSet rs = null;
 
         // 1. JDBC 드라이버 등록 : MySQL DB 접근 하기 위한 드라이버 등록
 
@@ -24,28 +24,45 @@ public class UserSelectAll {
             System.out.println("Connection ok " + connection);
 
 
+
             String query = new StringBuilder()
-                    .append(" SELECT * FROM users ")
+                    .append(" SELECT * FROM boards ")
                     .toString();
 
             PreparedStatement pstmt = connection.prepareStatement(query);
-            pstmt.setString(1,"12345");
-            pstmt.setString(2,"1");
+            //pstmt.setString(1,"ssgcom1");
 
             // 4. SQL 실행
-            int rows = pstmt.executeUpdate();
-            System.out.println(rows + "rows update completed");
+            rs = pstmt.executeQuery();
+
+            if (rs.next()) {
+                Board board = new Board();
+                board.setBno(rs.getInt("bno"));
+                board.setBtitle(rs.getString("btitle"));
+                board.setBwriter(rs.getString("bwriter"));
+                board.setBcontent(rs.getString("bcontent"));
+                board.setBdate(rs.getDate("bdate"));
+                board.setBfiledata(rs.getBlob("bfiledata"));
+                board.setBfilename(rs.getString("bfilename"));
+                System.out.println(board);
+            } else {
+                System.out.println("가입된 회원이 아닙니다.");
+            }
+
+
             // 5. PreparedStatement 객체 닫기
             pstmt.close();
 
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
-        }finally {
-            if(connection != null){
+        } finally {
+            if (connection != null) {
                 try {
                     connection.close();
                     System.out.println("Connection closed");
-                } catch (SQLException e) {e.printStackTrace();}
+                } catch (SQLException e) {
+                    e.printStackTrace();
+                }
             }
         }
 

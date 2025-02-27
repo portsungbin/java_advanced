@@ -1,11 +1,11 @@
-package jdbc.users;
+package jdbc.boards;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
 
-public class UserSelectAll {
+public class boardUpdate {
     public static void main(String[] args) {
         Connection connection = null;
 
@@ -24,13 +24,15 @@ public class UserSelectAll {
             System.out.println("Connection ok " + connection);
 
 
+
             String query = new StringBuilder()
-                    .append(" SELECT * FROM users ")
-                    .toString();
+                    .append(" UPDATE boards SET ")
+                    .append(" btitle = ? ")
+                    .append(" where bno = ? ").toString();
 
             PreparedStatement pstmt = connection.prepareStatement(query);
-            pstmt.setString(1,"12345");
-            pstmt.setString(2,"1");
+            pstmt.setString(1,"봄이 좋냐");
+            pstmt.setString(2,"2");
 
             // 4. SQL 실행
             int rows = pstmt.executeUpdate();

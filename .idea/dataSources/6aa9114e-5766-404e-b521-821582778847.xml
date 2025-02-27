@@ -5,133 +5,6 @@
       <DefaultCasing>lower/lower</DefaultCasing>
       <DefaultEngine>InnoDB</DefaultEngine>
       <DefaultTmpEngine>InnoDB</DefaultTmpEngine>
-      <Grants>|root||ssg|localhost|FILE|G
-demo_hr|schema||ssg|localhost|ALTER|G
-demo_hr|schema||ssg|localhost|ALTER ROUTINE|G
-demo_hr|schema||ssg|localhost|CREATE|G
-demo_hr|schema||ssg|localhost|CREATE ROUTINE|G
-demo_hr|schema||ssg|localhost|CREATE TEMPORARY TABLES|G
-demo_hr|schema||ssg|localhost|CREATE VIEW|G
-demo_hr|schema||ssg|localhost|DELETE|G
-demo_hr|schema||ssg|localhost|DROP|G
-demo_hr|schema||ssg|localhost|EVENT|G
-demo_hr|schema||ssg|localhost|EXECUTE|G
-demo_hr|schema||ssg|localhost|INDEX|G
-demo_hr|schema||ssg|localhost|INSERT|G
-demo_hr|schema||ssg|localhost|LOCK TABLES|G
-demo_hr|schema||ssg|localhost|REFERENCES|G
-demo_hr|schema||ssg|localhost|SELECT|G
-demo_hr|schema||ssg|localhost|SHOW VIEW|G
-demo_hr|schema||ssg|localhost|TRIGGER|G
-demo_hr|schema||ssg|localhost|UPDATE|G
-sakiladb|schema||ssg|localhost|ALTER|G
-sakiladb|schema||ssg|localhost|ALTER ROUTINE|G
-sakiladb|schema||ssg|localhost|CREATE|G
-sakiladb|schema||ssg|localhost|CREATE ROUTINE|G
-sakiladb|schema||ssg|localhost|CREATE TEMPORARY TABLES|G
-sakiladb|schema||ssg|localhost|CREATE VIEW|G
-sakiladb|schema||ssg|localhost|DELETE|G
-sakiladb|schema||ssg|localhost|DROP|G
-sakiladb|schema||ssg|localhost|EVENT|G
-sakiladb|schema||ssg|localhost|EXECUTE|G
-sakiladb|schema||ssg|localhost|INDEX|G
-sakiladb|schema||ssg|localhost|INSERT|G
-sakiladb|schema||ssg|localhost|LOCK TABLES|G
-sakiladb|schema||ssg|localhost|REFERENCES|G
-sakiladb|schema||ssg|localhost|SELECT|G
-sakiladb|schema||ssg|localhost|SHOW VIEW|G
-sakiladb|schema||ssg|localhost|TRIGGER|G
-sakiladb|schema||ssg|localhost|UPDATE|G
-sakildb|schema||ssg|localhost|ALTER|G
-sakildb|schema||ssg|localhost|ALTER ROUTINE|G
-sakildb|schema||ssg|localhost|CREATE|G
-sakildb|schema||ssg|localhost|CREATE ROUTINE|G
-sakildb|schema||ssg|localhost|CREATE TEMPORARY TABLES|G
-sakildb|schema||ssg|localhost|CREATE VIEW|G
-sakildb|schema||ssg|localhost|DELETE|G
-sakildb|schema||ssg|localhost|DROP|G
-sakildb|schema||ssg|localhost|EVENT|G
-sakildb|schema||ssg|localhost|EXECUTE|G
-sakildb|schema||ssg|localhost|INDEX|G
-sakildb|schema||ssg|localhost|INSERT|G
-sakildb|schema||ssg|localhost|LOCK TABLES|G
-sakildb|schema||ssg|localhost|REFERENCES|G
-sakildb|schema||ssg|localhost|SELECT|G
-sakildb|schema||ssg|localhost|SHOW VIEW|G
-sakildb|schema||ssg|localhost|TRIGGER|G
-sakildb|schema||ssg|localhost|UPDATE|G
-shopdb|schema||ssg|localhost|ALTER|G
-shopdb|schema||ssg|localhost|ALTER ROUTINE|G
-shopdb|schema||ssg|localhost|CREATE|G
-shopdb|schema||ssg|localhost|CREATE ROUTINE|G
-shopdb|schema||ssg|localhost|CREATE TEMPORARY TABLES|G
-shopdb|schema||ssg|localhost|CREATE VIEW|G
-shopdb|schema||ssg|localhost|DELETE|G
-shopdb|schema||ssg|localhost|DROP|G
-shopdb|schema||ssg|localhost|EVENT|G
-shopdb|schema||ssg|localhost|EXECUTE|G
-shopdb|schema||ssg|localhost|INDEX|G
-shopdb|schema||ssg|localhost|INSERT|G
-shopdb|schema||ssg|localhost|LOCK TABLES|G
-shopdb|schema||ssg|localhost|REFERENCES|G
-shopdb|schema||ssg|localhost|SELECT|G
-shopdb|schema||ssg|localhost|SHOW VIEW|G
-shopdb|schema||ssg|localhost|TRIGGER|G
-shopdb|schema||ssg|localhost|UPDATE|G
-ssgdb|schema||ssg|localhost|ALTER|G
-ssgdb|schema||ssg|localhost|ALTER ROUTINE|G
-ssgdb|schema||ssg|localhost|CREATE|G
-ssgdb|schema||ssg|localhost|CREATE ROUTINE|G
-ssgdb|schema||ssg|localhost|CREATE TEMPORARY TABLES|G
-ssgdb|schema||ssg|localhost|CREATE VIEW|G
-ssgdb|schema||ssg|localhost|DELETE|G
-ssgdb|schema||ssg|localhost|DROP|G
-ssgdb|schema||ssg|localhost|EVENT|G
-ssgdb|schema||ssg|localhost|EXECUTE|G
-ssgdb|schema||ssg|localhost|INDEX|G
-ssgdb|schema||ssg|localhost|INSERT|G
-ssgdb|schema||ssg|localhost|LOCK TABLES|G
-ssgdb|schema||ssg|localhost|REFERENCES|G
-ssgdb|schema||ssg|localhost|SELECT|G
-ssgdb|schema||ssg|localhost|SHOW VIEW|G
-ssgdb|schema||ssg|localhost|TRIGGER|G
-ssgdb|schema||ssg|localhost|UPDATE|G
-testdb|schema||ssg|localhost|ALTER|G
-testdb|schema||ssg|localhost|ALTER ROUTINE|G
-testdb|schema||ssg|localhost|CREATE|G
-testdb|schema||ssg|localhost|CREATE ROUTINE|G
-testdb|schema||ssg|localhost|CREATE TEMPORARY TABLES|G
-testdb|schema||ssg|localhost|CREATE VIEW|G
-testdb|schema||ssg|localhost|DELETE|G
-testdb|schema||ssg|localhost|DROP|G
-testdb|schema||ssg|localhost|EVENT|G
-testdb|schema||ssg|localhost|EXECUTE|G
-testdb|schema||ssg|localhost|INDEX|G
-testdb|schema||ssg|localhost|INSERT|G
-testdb|schema||ssg|localhost|LOCK TABLES|G
-testdb|schema||ssg|localhost|REFERENCES|G
-testdb|schema||ssg|localhost|SELECT|G
-testdb|schema||ssg|localhost|SHOW VIEW|G
-testdb|schema||ssg|localhost|TRIGGER|G
-testdb|schema||ssg|localhost|UPDATE|G
-극장|schema||ssg|localhost|ALTER|G
-극장|schema||ssg|localhost|ALTER ROUTINE|G
-극장|schema||ssg|localhost|CREATE|G
-극장|schema||ssg|localhost|CREATE ROUTINE|G
-극장|schema||ssg|localhost|CREATE TEMPORARY TABLES|G
-극장|schema||ssg|localhost|CREATE VIEW|G
-극장|schema||ssg|localhost|DELETE|G
-극장|schema||ssg|localhost|DROP|G
-극장|schema||ssg|localhost|EVENT|G
-극장|schema||ssg|localhost|EXECUTE|G
-극장|schema||ssg|localhost|INDEX|G
-극장|schema||ssg|localhost|INSERT|G
-극장|schema||ssg|localhost|LOCK TABLES|G
-극장|schema||ssg|localhost|REFERENCES|G
-극장|schema||ssg|localhost|SELECT|G
-극장|schema||ssg|localhost|SHOW VIEW|G
-극장|schema||ssg|localhost|TRIGGER|G
-극장|schema||ssg|localhost|UPDATE|G</Grants>
       <ServerVersion>8.0.17</ServerVersion>
     </root>
     <collation id="2" parent="1" name="armscii8_bin">
@@ -1002,8 +875,8 @@ testdb|schema||ssg|localhost|UPDATE|G
     </schema>
     <schema id="277" parent="1" name="ssgdb">
       <Current>1</Current>
-      <LastIntrospectionLocalTimestamp>2025-02-27.02:50:05</LastIntrospectionLocalTimestamp>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+      <LastIntrospectionLocalTimestamp>2025-02-27.06:49:37</LastIntrospectionLocalTimestamp>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </schema>
     <schema id="278" parent="1" name="testdb">
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
@@ -1014,264 +887,299 @@ testdb|schema||ssg|localhost|UPDATE|G
     <user id="280" parent="1" name="ssg">
       <Host>localhost</Host>
     </user>
-    <table id="281" parent="277" name="boards">
+    <table id="281" parent="277" name="board">
+      <Engine>InnoDB</Engine>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
+    </table>
+    <table id="282" parent="277" name="boards">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="282" parent="277" name="book">
+    <table id="283" parent="277" name="book">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="283" parent="277" name="cust_addr">
+    <table id="284" parent="277" name="cust_addr">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="284" parent="277" name="customer">
+    <table id="285" parent="277" name="customer">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="285" parent="277" name="movie">
+    <table id="286" parent="277" name="movie">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="286" parent="277" name="mybook">
+    <table id="287" parent="277" name="mybook">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="287" parent="277" name="orders">
+    <table id="288" parent="277" name="orders">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <table id="288" parent="277" name="users">
+    <table id="289" parent="277" name="users">
       <Engine>InnoDB</Engine>
       <CollationName>utf8mb4_0900_ai_ci</CollationName>
     </table>
-    <column id="289" parent="281" name="bno">
+    <column id="290" parent="281" name="bno">
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StoredType>int(11)|0s</StoredType>
+    </column>
+    <column id="291" parent="281" name="btitle">
+      <Position>2</Position>
+      <StoredType>varchar(100)|0s</StoredType>
+    </column>
+    <column id="292" parent="281" name="bcontent">
+      <Position>3</Position>
+      <StoredType>text|0s</StoredType>
+    </column>
+    <column id="293" parent="281" name="bwriter">
+      <Position>4</Position>
+      <StoredType>varchar(50)|0s</StoredType>
+    </column>
+    <column id="294" parent="281" name="bdate">
+      <Position>5</Position>
+      <StoredType>varchar(20)|0s</StoredType>
+    </column>
+    <index id="295" parent="281" name="PRIMARY">
+      <ColNames>bno</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <key id="296" parent="281" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="297" parent="282" name="bno">
       <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="290" parent="281" name="btitle">
+    <column id="298" parent="282" name="btitle">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(100)|0s</StoredType>
     </column>
-    <column id="291" parent="281" name="bcontent">
+    <column id="299" parent="282" name="bcontent">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>longtext|0s</StoredType>
     </column>
-    <column id="292" parent="281" name="bwriter">
+    <column id="300" parent="282" name="bwriter">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="293" parent="281" name="bdate">
+    <column id="301" parent="282" name="bdate">
       <DefaultExpression>CURRENT_TIMESTAMP</DefaultExpression>
       <Position>5</Position>
       <StoredType>datetime|0s</StoredType>
     </column>
-    <column id="294" parent="281" name="bfilename">
+    <column id="302" parent="282" name="bfilename">
       <Position>6</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="295" parent="281" name="bfiledata">
+    <column id="303" parent="282" name="bfiledata">
       <Position>7</Position>
       <StoredType>longblob|0s</StoredType>
     </column>
-    <index id="296" parent="281" name="PRIMARY">
+    <index id="304" parent="282" name="PRIMARY">
       <ColNames>bno</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="297" parent="281" name="PRIMARY">
+    <key id="305" parent="282" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="298" parent="282" name="bookid">
+    <column id="306" parent="283" name="bookid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="299" parent="282" name="bookname">
+    <column id="307" parent="283" name="bookname">
       <Position>2</Position>
       <StoredType>varchar(40)|0s</StoredType>
     </column>
-    <column id="300" parent="282" name="publisher">
+    <column id="308" parent="283" name="publisher">
       <Position>3</Position>
       <StoredType>varchar(40)|0s</StoredType>
     </column>
-    <column id="301" parent="282" name="price">
+    <column id="309" parent="283" name="price">
       <Position>4</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <index id="302" parent="282" name="PRIMARY">
+    <index id="310" parent="283" name="PRIMARY">
       <ColNames>bookid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="303" parent="282" name="PRIMARY">
+    <key id="311" parent="283" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="304" parent="283" name="custid">
+    <column id="312" parent="284" name="custid">
       <AutoIncrement>4</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="305" parent="283" name="addrid">
+    <column id="313" parent="284" name="addrid">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="306" parent="283" name="address">
+    <column id="314" parent="284" name="address">
       <Position>3</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="307" parent="283" name="phone">
+    <column id="315" parent="284" name="phone">
       <Position>4</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <column id="308" parent="283" name="changeday">
+    <column id="316" parent="284" name="changeday">
       <Position>5</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <index id="309" parent="283" name="PRIMARY">
+    <index id="317" parent="284" name="PRIMARY">
       <ColNames>custid
 addrid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="310" parent="283" name="PRIMARY">
+    <key id="318" parent="284" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="311" parent="284" name="custid">
+    <column id="319" parent="285" name="custid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="312" parent="284" name="name">
+    <column id="320" parent="285" name="name">
       <Position>2</Position>
       <StoredType>varchar(40)|0s</StoredType>
     </column>
-    <column id="313" parent="284" name="address">
+    <column id="321" parent="285" name="address">
       <Position>3</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="314" parent="284" name="phone">
+    <column id="322" parent="285" name="phone">
       <Position>4</Position>
       <StoredType>varchar(20)|0s</StoredType>
     </column>
-    <index id="315" parent="284" name="PRIMARY">
+    <index id="323" parent="285" name="PRIMARY">
       <ColNames>custid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="316" parent="284" name="PRIMARY">
+    <key id="324" parent="285" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="317" parent="285" name="movie_id">
+    <column id="325" parent="286" name="movie_id">
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="318" parent="285" name="movie_title">
+    <column id="326" parent="286" name="movie_title">
       <Position>2</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="319" parent="285" name="movie_direcor">
+    <column id="327" parent="286" name="movie_direcor">
       <Position>3</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <column id="320" parent="285" name="movie_star">
+    <column id="328" parent="286" name="movie_star">
       <Position>4</Position>
       <StoredType>varchar(30)|0s</StoredType>
     </column>
-    <column id="321" parent="285" name="movie_script">
+    <column id="329" parent="286" name="movie_script">
       <Position>5</Position>
       <StoredType>longtext|0s</StoredType>
     </column>
-    <column id="322" parent="285" name="movie_film">
+    <column id="330" parent="286" name="movie_film">
       <Position>6</Position>
       <StoredType>longblob|0s</StoredType>
     </column>
-    <column id="323" parent="286" name="bookid">
+    <column id="331" parent="287" name="bookid">
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="324" parent="286" name="price">
+    <column id="332" parent="287" name="price">
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="325" parent="287" name="orderid">
+    <column id="333" parent="288" name="orderid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="326" parent="287" name="custid">
+    <column id="334" parent="288" name="custid">
       <Position>2</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="327" parent="287" name="bookid">
+    <column id="335" parent="288" name="bookid">
       <Position>3</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="328" parent="287" name="saleprice">
+    <column id="336" parent="288" name="saleprice">
       <Position>4</Position>
       <StoredType>int(11)|0s</StoredType>
     </column>
-    <column id="329" parent="287" name="orderdate">
+    <column id="337" parent="288" name="orderdate">
       <Position>5</Position>
       <StoredType>date|0s</StoredType>
     </column>
-    <index id="330" parent="287" name="PRIMARY">
+    <index id="338" parent="288" name="PRIMARY">
       <ColNames>orderid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="331" parent="287" name="PRIMARY">
+    <key id="339" parent="288" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="332" parent="288" name="userid">
+    <column id="340" parent="289" name="userid">
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="333" parent="288" name="username">
+    <column id="341" parent="289" name="username">
       <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="334" parent="288" name="userpassword">
+    <column id="342" parent="289" name="userpassword">
       <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="335" parent="288" name="userage">
+    <column id="343" parent="289" name="userage">
       <NotNull>1</NotNull>
       <Position>4</Position>
       <StoredType>decimal(3)|0s</StoredType>
     </column>
-    <column id="336" parent="288" name="useremail">
+    <column id="344" parent="289" name="useremail">
       <NotNull>1</NotNull>
       <Position>5</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <index id="337" parent="288" name="PRIMARY">
+    <index id="345" parent="289" name="PRIMARY">
       <ColNames>userid</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="338" parent="288" name="PRIMARY">
+    <key id="346" parent="289" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
