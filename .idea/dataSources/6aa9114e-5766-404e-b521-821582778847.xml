@@ -921,9 +921,10 @@
     </table>
     <table id="289" parent="277" name="users">
       <Engine>InnoDB</Engine>
-      <CollationName>utf8mb4_0900_ai_ci</CollationName>
+      <CollationName>utf8mb4_unicode_ci</CollationName>
     </table>
     <column id="290" parent="281" name="bno">
+      <AutoIncrement>1</AutoIncrement>
       <NotNull>1</NotNull>
       <Position>1</Position>
       <StoredType>int(11)|0s</StoredType>
@@ -1155,22 +1156,18 @@ addrid</ColNames>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
     <column id="341" parent="289" name="username">
-      <NotNull>1</NotNull>
       <Position>2</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
     <column id="342" parent="289" name="userpassword">
-      <NotNull>1</NotNull>
       <Position>3</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>
-    <column id="343" parent="289" name="userage">
-      <NotNull>1</NotNull>
+    <column id="343" parent="289" name="phonenumber">
       <Position>4</Position>
-      <StoredType>decimal(3)|0s</StoredType>
+      <StoredType>varchar(15)|0s</StoredType>
     </column>
-    <column id="344" parent="289" name="useremail">
-      <NotNull>1</NotNull>
+    <column id="344" parent="289" name="address">
       <Position>5</Position>
       <StoredType>varchar(50)|0s</StoredType>
     </column>

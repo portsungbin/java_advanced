@@ -11,20 +11,6 @@ public class BoardDao {
     Scanner sc = new Scanner(System.in);
 
     // DB에 저장된 현재 최대 bno 값을 조회해 다음 번호를 결정
-    public int getNextBno() {
-        int nextBno = 1;
-        String sql = "SELECT MAX(bno) FROM board";
-        try (Connection conn = DBConfig.getConnection();
-             PreparedStatement pstmt = conn.prepareStatement(sql);
-             ResultSet rs = pstmt.executeQuery()) {
-            if (rs.next()) {
-                nextBno = rs.getInt(1) + 1;
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-        return nextBno;
-    }
 
     public void list() {
         System.out.println("[게시물 목록]");
@@ -60,7 +46,6 @@ public class BoardDao {
     public void create() {
         System.out.println("[새 게시물 입력]");
         Board board = new Board();
-        board.setBno(getNextBno());
         System.out.print("제목: ");
         board.setBtitle(sc.nextLine());
         System.out.print("내용: ");
