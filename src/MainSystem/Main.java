@@ -139,24 +139,28 @@ public class Main {
                             System.out.println("잘못 입력하셨습니다.");
                     }
                     break;
-                case 6: // 업데이트
+                // (Main 클래스 내 업데이트 부분, case 6)
+                case 6: // 업데이트 기능 선택
+                    // 1. 업데이트할 직원의 사번을 입력받습니다.
                     System.out.println("업데이트할 직원의 사번을 입력하세요:");
                     eno = Utility.readInput(String.class);
 
-                    if (eno == null) {
+                    // 2. 입력한 사번의 직원이 존재하는지 Controller를 통해 확인합니다.
+                    if ((eno) == null) {
                         System.out.println("해당 사번의 직원이 존재하지 않습니다.");
                         break;
                     }
 
-                    name = "";
-                    enterYear = 0;
-                    enterMonth = 0;
-                    enterDay = 0;
-                    //위의 role,secno값이 있어 새로운 값 정의
-                    String roleStr = "";
-                    String secnoStr = "";
-                    salary = 0; // insert시 테이블에서 자동으로 0이 들어가지만 업데이트 시에는 이미 레코드가 존재하기때문에 기본값 0으로 초기화 해줘야함
+                    // 3. 업데이트하지 않을 항목은 기본값으로 설정합니다.
+                    name = "";         // 이름: 빈 문자열 (업데이트하지 않으면 그대로)
+                    enterYear = 0;        // 입사년도: 0
+                    enterMonth = 0;       // 입사월: 0
+                    enterDay = 0;         // 입사일: 0
+                    String roleStr = "";      // 직급: 빈 문자열
+                    String secnoStr = "";     // 비서번호: 빈 문자열
+                    salary = 0;           // 급여: 0
 
+                    // 4. 업데이트할 항목을 선택하도록 메뉴를 보여줍니다.
                     System.out.println("업데이트할 항목을 선택하세요:");
                     System.out.println("1. 이름");
                     System.out.println("2. 입사월");
@@ -167,43 +171,47 @@ public class Main {
                     System.out.println("7. 급여");
                     int option = Utility.readInput(Integer.class);
 
+                    // 5. 사용자가 선택한 항목에 따라 새 값을 입력받습니다.
                     switch (option) {
                         case 1:
                             System.out.println("새로운 이름을 입력하세요:");
-                            name = getValidatedName();
+                            name = getValidatedName(); // 이름 검증 메서드 호출
                             break;
                         case 2:
                             System.out.println("새로운 입사월을 입력하세요:");
-                            enterMonth = getValidateEnterMonth();
+                            enterMonth = getValidateEnterMonth(); // 입사월 검증 메서드 호출
                             break;
                         case 3:
                             System.out.println("새로운 입사년도를 입력하세요:");
-                            enterYear = getValidateEnterYear();
+                            enterYear = getValidateEnterYear(); // 입사년도 검증 메서드 호출
                             break;
                         case 4:
                             System.out.println("새로운 입사일을 입력하세요:");
                             int newYear = getValidateEnterYear();
                             int newMonth = getValidateEnterMonth();
-                            enterDay = getValidateEnterDay(newYear, newMonth);
+                            enterDay = getValidateEnterDay(newYear, newMonth); // 입사일 검증
                             break;
                         case 5:
                             System.out.println("새로운 직급을 입력하세요:");
-                            roleStr = Utility.readInput(String.class); // 문자열
+                            roleStr = Utility.readInput(String.class); // 직급을 문자열로 입력
                             break;
                         case 6:
                             System.out.println("새로운 비서번호를 입력하세요:");
-                            secnoStr = Utility.readInput(String.class); // 문자열
+                            secnoStr = Utility.readInput(String.class); // 비서번호를 문자열로 입력
                             break;
                         case 7:
                             System.out.println("새로운 급여를 입력하세요:");
-                            salary = Utility.readInput(Integer.class);
+                            salary = Utility.readInput(Integer.class); // 급여를 정수로 입력
                             break;
                         default:
                             System.out.println("잘못된 옵션입니다.");
                             break;
                     }
 
-                    Employee updateEmployee = new Employee(eno, name, enterYear, enterMonth, enterDay, roleStr, secnoStr, salary , 0);
+                    // 6. 입력된 값들로 Employee 객체를 생성합니다.
+                    //    이 객체는 업데이트할 항목만 새 값이 있고, 나머지는 기본값으로 남습니다.
+                    Employee updateEmployee = new Employee(eno, name, enterYear, enterMonth, enterDay, roleStr, secnoStr, salary, 0);
+                    // 7. Controller에 업데이트 요청을 전달합니다.
                     controller.selectUpdateEmployee(updateEmployee);
                     break;
                 case 0: // 직원 시스템 종료 후 메인 메뉴로 복귀

@@ -212,7 +212,7 @@ public class EmployeeDBIO extends ObjectIO implements EmployeeIO {
     }
 
     @Override
-    public List<Employee> getUnassignedSecretaries()  {
+    public List<Employee> getUnassignedSecretaries() {
         List<Employee> secretaries = new ArrayList<>();
         String sql = "SELECT * FROM Employee " +
                 "WHERE role = 'Secretary' " +
@@ -246,58 +246,76 @@ public class EmployeeDBIO extends ObjectIO implements EmployeeIO {
         return secretaries;
     }
 
+    /**
+     * Employee 객체에 담긴 값 중 기본값이 아닌 단 하나의 항목을
+     * 데이터베이스의 해당 직원 레코드에 업데이트합니다.
+     * 예를 들어, 이름만 변경할 경우 Employee 객체는
+     * new Employee("12345", "새이름", 0, 0, 0, "", "", 0) 형태로 생성됩니다.
+     *
+     * @param employee 업데이트할 정보를 담은 Employee 객체
+     * @return 업데이트 성공하면 true, 실패하면 false를 반환
+     */
     @Override
     public boolean selectUpdateEmployee(Employee employee) {
+        // 1. 업데이트할 직원의 사번(eno)를 가져옵니다.
         String eno = employee.getEno();
 
+        // 2. 사번에 해당하는 직원이 데이터베이스에 있는지 확인합니다.
         Employee existing = getEmployeeById(eno);
-        if (existing == null) { // 독립적 검증
+        if (existing == null) {
             System.out.println("업데이트 실패: 해당 사번의 직원이 존재하지 않습니다.");
             return false;
         }
 
+        // 3. 업데이트할 컬럼과 새 값을 저장할 변수를 준비합니다.
         String column = null;
         String newValue = null;
 
-        if (employee.getName() != null && !employee.getName().isEmpty()) { // 문자열이 비어있지 않은지 확인하는 표현식
-            column = "name";
-            newValue = employee.getName();
-        } else if (employee.getEnterYear() != 0) { // 0이 아닌 원래 값이 들어있으면 업데이트 하자
-            column = "enteryear";
+        // 4. Employee 객체에서 업데이트할 항목을 하나만 선택합니다.
+        if (employee.getName() != null && !employee.getName().isEmpty()) {
+            column = "name";                        // 이름 업데이트
+            newValue = employee.getName();            // 새 이름
+        } else if (employee.getEnterYear() != 0) {
+            column = "enteryear";                     // 입사년도 업데이트
             newValue = Integer.toString(employee.getEnterYear());
         } else if (employee.getEnterMonth() != 0) {
-            column = "entermonth";
+            column = "entermonth";                    // 입사월 업데이트
             newValue = Integer.toString(employee.getEnterMonth());
         } else if (employee.getEnterDay() != 0) {
-            column = "enterday";
+            column = "enterday";                      // 입사일 업데이트
             newValue = Integer.toString(employee.getEnterDay());
         } else if (employee.getRole() != null && !employee.getRole().isEmpty()) {
-            column = "role";
+            column = "role";                          // 직급 업데이트
             newValue = employee.getRole();
         } else if (employee.getSecno() != null && !employee.getSecno().isEmpty()) {
-            column = "secno";
+            column = "secno";                         // 비서번호 업데이트
             newValue = employee.getSecno();
         } else if (employee.getSalary() != 0) {
-            column = "salary";
+            column = "salary";                        // 급여 업데이트
             newValue = Integer.toString(employee.getSalary());
         } else {
+            // 아무 항목도 업데이트할 값이 없다면
             System.out.println("업데이트할 항목이 지정되지 않았습니다.");
             return false;
         }
 
+        // 5. 선택된 컬럼만 업데이트하는 SQL 쿼리 생성
         String sql = "UPDATE EMPLOYEE SET " + column + " = ? WHERE eno = ?";
 
         try (Connection conn = DBUtil.getConnection();
              PreparedStatement pstmt = conn.prepareStatement(sql)) {
 
-            if (column.equals("enteryear") || column.equals("entermonth") || // 정수형이 들어왔을때 newValue에 정수형으로 받아 오기 위해.
+            // 6. 숫자형 컬럼이면 String newValue를 정수로 변환해서 바인딩, 아니면 그대로 문자열로 바인딩
+            if (column.equals("enteryear") || column.equals("entermonth") ||
                     column.equals("enterday") || column.equals("salary")) {
                 pstmt.setInt(1, Integer.parseInt(newValue));
             } else {
                 pstmt.setString(1, newValue);
             }
+            // 7. 사번을 WHERE 조건에 바인딩
             pstmt.setString(2, eno);
 
+            // 8. 쿼리를 실행하고 결과를 확인합니다.
             int affectedRows = pstmt.executeUpdate();
             if (affectedRows > 0) {
                 System.out.println("업데이트 성공");
@@ -311,5 +329,4 @@ public class EmployeeDBIO extends ObjectIO implements EmployeeIO {
 
         return false;
     }
-
 }
