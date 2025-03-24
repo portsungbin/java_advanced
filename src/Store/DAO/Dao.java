@@ -1,7 +1,7 @@
 package Store.DAO;
 
 import Store.DTO.Dto;
-import Store.db;
+import Store.Util.db;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
