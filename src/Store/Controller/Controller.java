@@ -88,7 +88,13 @@ public class Controller {
     }
 
 
-
+    public void menu(){
+        System.out.println("1. 과일 추가");
+        System.out.println("2. 과일 삭제");
+        System.out.println("3. 과일 가격 수정");
+        System.out.println("4. 과일 재고 확인");
+        System.out.println("선택 : ");
+    }
 
 
 

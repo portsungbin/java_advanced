@@ -31,8 +31,9 @@
           <node kind="schema">
             <name qname="@" />
             <name qname="sakiladb" />
-            <name qname="신세계무역" />
             <name qname="store" />
+            <name qname="신세계무역" />
+            <name qname="board" />
           </node>
         </introspection-scope>
       </schema-mapping>
